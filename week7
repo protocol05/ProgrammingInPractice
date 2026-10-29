@@ -1,5 +1,18 @@
 #include <stdio.h>
 #include <string.h>
+void displayMenu()
+{
+ printf("\n");
+ printf("================================\n");
+ printf(" MUNICIPAL FINANCIAL MANAGEMENT\n");
+ printf("================================\n");
+ printf("1. Employees\n");
+ printf("2. Suppliers\n");
+ printf("3. Budget\n");
+ printf("4. Exit\n");
+ printf("Enter choice: ");
+}
+
 int main()
 {
  char supplierName[100];
