@@ -21,3 +21,29 @@ int main()
  printf("Net Salary: %.2f\n", netSalary);
     return 0;
 }
+
+
+#include <stdio.h>
+int main()
+{
+ char supplierName[48];
+ float price;
+ float budget;
+ int registered;
+ int documentsComplete;
+ printf("Enter supplier name: \n");
+ scanf("%49s", supplierName);
+ printf("Enter tender price: \n");
+ scanf("%f", &price);
+ printf("Enter available budget: \n");
+ scanf("%f", &budget);
+ printf("Is supplier registered? (1=Yes, 0=No): \n");
+ scanf("%d", &registered);
+ printf("Are all documents complete? (1=Yes, 0=No): \n");
+ scanf("%d", &documentsComplete);
+ if (registered == 0 || documentsComplete == 0)
+ {
+ printf("SupplierName: %s", supplierName);
+     return 0;
+}
+}
