@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include "employees.h"
+#include <stdio.h>
+
+
+void addEmployee(void)
+{
+ printf("Adding employee...\n");
+}
+void listEmployees(void)
+{
+ printf("Listing employees...\n");
+}
+double calculatePayrollTotal(void)
+{
+ return 0.0;
+}
+
+int main(void)
+{
+ printf("Municipal Financial Management System\n");
+ addEmployee();
+ listEmployees();
+ return 0;
+}
+
+int main(void)
+{
+ FILE *fp = fopen("employees.txt", "r");
+ int id;
+ char name[50];
+ double salary;
+Page 9 of 15
+ if (fp == NULL) {
+ perror("employees.txt");
+ return 1;
+ }
+ while (fscanf(fp, "%d %49s %lf", &id, name, &salary) == 3) {
+ printf("%d %s %.2f\n", id, name, salary);
+ }
+ fclose(fp);
+ return 0;
+}
